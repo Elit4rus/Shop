@@ -1,0 +1,32 @@
+﻿<Window x:Class="Shop.View.Windows.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop.View.Windows"
+        mc:Ignorable="d"
+        Title="Авторизация" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Center" Text="Авторизация"/>
+        <TextBlock Grid.Row="2" Text="Email :" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Row="4" Text="Пароль :" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="EmailTb"  Grid.Column="3"  Grid.Row="2"/>
+        <PasswordBox Name="PasswordPb" Grid.Column="3" Grid.Row="4"/>
+        <Button  Name="LoginBtn" Grid.ColumnSpan="3" Width="170" Grid.Row="6" Content="Войти" Click="LoginBtn_Click"/>
+    </Grid>
+</Window>

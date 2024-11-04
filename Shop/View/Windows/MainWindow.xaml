@@ -1,0 +1,51 @@
+﻿<Window x:Class="Shop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        
+        <!--Верхнее меню-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="NameTbl" Grid.ColumnSpan="4" HorizontalAlignment="Center" FontSize="20" FontWeight="Medium"/>
+            <Button Name="OutBtn" Grid.Column="3" Content="Выйти" Width="130" Height="35" Click="OutBtn_Click"/>
+        </Grid>
+        
+        <!--Центр-->
+        <Frame Grid.Row="2" x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="10 0"/>
+        
+        <!--Нижнее меню (кнопки)-->
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ProductBtn" Content="Товары" Width="140" Height="40" Click="ProductBtn_Click"/>
+                <Button Name="ManagerBtn" Grid.Column="2" Content="Персонал" Width="140" Height="40" Click="ManagerBtn_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
